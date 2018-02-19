@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html>
-<title>SunExposureExplorer</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-body, html {
-    height: 100%;
-    font-family: "Inconsolata", sans-serif;
-}
-</style>
-<body>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SunExposure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="test.js"></script>
+</head>
+<div>
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
@@ -33,15 +30,17 @@ body, html {
 
 <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Welcome to SunExposure Explorer</span></h5>
 
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="height:600px;">
-  <div style="width:500px; height:400px;margin-left: 50px;top:-10px;display:inline-block;position:relative;">
+<div class="w3-container" id="weather" style="max-width:500px;margin-left:50px;display:inline-block;position:relative">
+  <div class="w3-content" style="width:500px; height:400px;top:-10px;display:inline-block;position:relative;">
     <span class="w3-tag">Weather</span>
     <img src="images/weather.png" alt="Current Weather" style="width:90%;height:90%;"/>
     <p> <strong>Nice sunshine. Come on and go out for a walk.</strong></p>
     <p> <strong> Please use SPF 30+ sunscreen.</strong></p>
   </div>
-  <div class="w3-content" style="max-width:600px;	margin-right: 29.5px; display:inline-block;">
+</div>
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="height:600px;display:inline-block">
+  <div class="w3-content" style="max-width:600px;	margin-right: 29.5px;">
     <span class="w3-tag" style="margin-left:29.5px">Feed</span>
     <div id="googleMap" style="width:100%;height:400px;	margin-left: 29.5px;"></div>
     <form action="/action_page.php" target="_blank">
@@ -57,36 +56,32 @@ body, html {
 <script>
 function myMap()
 {
-  var coordinates = [];
-  var data =[[42.053230, -87.674790],[42.057623, -87.675812]];
-  var bounds = new google.maps.LatLngBounds();
-  for (var i in data){
-    var point = new google.maps.LatLng(data[i][0],data[i][1]);
-    bounds.extend(point);
-    coordinates.push(point);
-  }
-  new google.maps.Polyline({
-    path:coordinates,
-    strokeColor:'0000FF',
-    strokeOpacity:0.5,
-    strokeWeight:4,
-    map:map,
-  });
-  new google.maps.Marker({
-    position:new google.maps.LatLng(),
-    icon:map,
-    map:map,
-  });
   myCenter=new google.maps.LatLng(42.056491, -87.675074);
   var mapOptions= {
     center:myCenter,
-    zoom:16, scrollwheel: false, draggable: true,
+    zoom:15, scrollwheel: false, draggable: true,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     mapTypeControl:false,
     panControl:false,
     streetViewControl:false,
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var coordinates = [
+          {lat: 42.056224, lng: -87.675891},
+          {lat: 42.056256, lng: -87.677178},
+          {lat: 42.058367, lng: -87.677135},
+          {lat: 42.058423, lng: -87.681620}
+        ];
+
+  var path = new google.maps.Polyline({
+    path:coordinates,
+    geodesic: true,
+    strokeColor:'0000FF',
+    strokeOpacity:1.0,
+    strokeWeight:2
+  });
+  path.setMap(map);
 }
 
 
