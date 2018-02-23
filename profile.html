@@ -5,16 +5,17 @@
     <title>SunExposure</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="training.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="test.js"></script>
+    <script src="SunExposure.js"></script>
 </head>
-<div>
+
 <div class="w3-top">
     <!--header-->
     <div class="w3-row w3-padding w3-black">
         <div class="w3-col s3">
-            <a href="mapp.html" class="w3-button w3-block w3-black">HOME</a>
+            <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s3">
             <a href="#about" class="w3-button w3-block w3-black">MY PLAN</a>
@@ -32,15 +33,23 @@
             <a href="#where" class="w3-button w3-block w3-black">PROFILE</a>
         </div>
     </div>
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-row-padding">
     <!-- Left Column -->
-    <div class="w3-third">
+    <!--<div class="w3-third">-->
+    <div class="w3-container w3-third">
         <div class="w3-white w3-text-grey w3-card-4">
             <div class="w3-display-container">
-                <img src="images/profile.jpg" style="width:60%">
-                <div class="w3-display-right w3-container w3-text-black">
-                    <h2>User Name</h2>
+                <!--<div class="w3-container">-->
+                    <img src="images/profile.jpg" style="width: 66%">
+                <!--</div>-->
+                <!--<div class="w3-container w3-display-bottomright">-->
+                    <div class="w3-display-right w3-container w3-text-black">
+
+                    <h2 >User</h2>
+                    <h2>Name</h2>
+
                 </div>
             </div>
             <div class="w3-container">
@@ -59,11 +68,6 @@
                 </div>
                 <hr>
                 <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Achievements</b></p>
-                <!--<div class="w3-container">-->
-                    <!--<h6 class="w3-text-teal"><i class="fa fa-certificate fa-fw w3-margin-right w3-large w3-text-teal"></i>Modal1</h6>-->
-                    <!--<p>Walk 10 miles, Reduced 1kg carbon emissions!</p>-->
-                    <!--<hr>-->
-                <!--</div>-->
                 <p>No achievements yet, Cheer Up!</p>
 
 
@@ -77,17 +81,46 @@
     </div>
 
     <!-- Right Column -->
-    <div class="w3-twothird">
+    <!--<div class="w3-twothird">-->
+    <div class="w3-container w3-twothird">
         <div class="w3-container w3-card w3-white">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Physical conditions</h2>
-            <!--<div class="w3-container">-->
-                <!--&lt;!&ndash;<h5 class="w3-opacity"><b>W3Schools.com</b></h5>&ndash;&gt;-->
-                <!--<h6 class="w3-text-teal"><i class="fa fa-certificate fa-fw w3-margin-right w3-large w3-text-teal"></i>Modal1</h6>-->
-                <!--<p>Walk 10 miles, Reduced 1kg carbon emissions!</p>-->
-                <!--<hr>-->
-                <!--&lt;!&ndash;<button id="textchanger">Modify</button>&ndash;&gt;-->
-            <!--</div>-->
-            <div id="modify">
+            <!--Present Part-->
+            <div id="present" class="training-wrap w3-container">
+                <div>
+
+                </div>
+                <div class="training-data">
+                    <div class="data-text">
+                        <span class="text-line"></span>
+                        <span>Accumulate:</span>
+                    </div>
+                    <div class="data-time">
+                        <span class="data-min">630.2</span>
+                        <span class="data-text data-unit">minutes</span>
+                    </div>
+                    <div class="data-cont">
+                        <span>
+                            <span class="data-num">17</span>
+                            <span class="data-text data-unit">times</span>
+                        </span>
+                        <span>
+                            <span class="data-num data-cal">1257</span>
+                            <span class="data-text data-unit">Calorie</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="body-pic-wrap">
+                    <img src="images/body.png" class="body-pic">
+                </div>
+                <div id="current plan" class="data-pic">
+                    <img src="images/traindata.png">
+                    <br>
+                    <button class="w3-button w3-black">Current Plan</button>
+                </div>
+            </div>
+            <!--Modify part-->
+            <div id="modify" style="display: none">
                 <form target="_blank">
                     <label class="w3-large">Age</label>
                     <p><input class="w3-input w3-padding-small w3-border" type="text" placeholder="18" required name="Age"></p>
@@ -106,10 +139,8 @@
                     <p><input class="w3-input w3-padding-small w3-border" type="number" placeholder="cm" required name="Waistline"></p>
                     <label class="w3-large">Bust</label>
                     <p><input class="w3-input w3-padding-small w3-border" type="number" placeholder="cm" required name="Bust"></p>
-                    <p><button class="w3-button w3-black" type="submit">SAVE</button></p>
+                    <p><button class="w3-button w3-black">SAVE</button></p>
                 </form>
-
-
             </div>
 
         </div>
@@ -118,7 +149,8 @@
     </div>
     </div>
     </div>
-    </div>
+    <!--</div>-->
+    <!--</div>-->
 </div>
 
 
