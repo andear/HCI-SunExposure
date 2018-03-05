@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="SunExposure.js"></script>
+</head>
+<body>
+<!--<div style="background-image: url('images/profile.jpg')">-->
+
+<div style="text-align: center">
+    <h2>Welcome To SunExposure</h2>
+</div>
+
+<div class="w3-container w3-twothird" style="position: relative; left: 250px">
+    <!--<div class="w3-container">-->
+    <div class="imgcontainer">
+        <img src="images/profile.jpg" class="avatar">
+    </div>
+
+    <div class="container">
+    <!--<div class="container">-->
+        <label for="uname"><b>Username</b></label>
+        <input id="uname" type="text" placeholder="Enter Username" name="uname" value="JamesDean" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input id="psw" type="password" placeholder="Enter Password" name="psw"  value="330HCI" required>
+
+        <button type="submit" class="w3-button w3-black" onclick="login()">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+            <div style="text-align: right">Forgot <a href="#" onclick="remindPassword()">password?</a></div>
+    </div>
+</div>
+
+<!--</div>-->
+</body>
+</html>
