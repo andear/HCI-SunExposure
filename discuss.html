@@ -67,7 +67,8 @@
                         <div class="w3-card w3-round w3-white">
                             <div class="w3-container w3-padding">
                                 <h6 class="w3-opacity">Post anything you want to share!</h6>
-                                <p contenteditable="true" id="postedText" class=" w3-border w3-padding">Do you like the weather today?</p>
+                                 <p contenteditable="true" id="postedText" class=" w3-border w3-padding" type="text" placeholder="Do you like the weather today?"></p>
+                                <!--<p><input id="postedText" class="w3-input w3-border" type="text" placeholder="Do you like the weather today?"></p>-->
                                 <button type="button" id="addPic" class="w3-button w3-black" onclick="document.getElementById('addedPic').click();"><i class="fa fa-pencil"></i> &nbsp;Add Picture</button>
                                 <button type="button" id="post" class="w3-button w3-black" onclick="onPost()"><i class="fa fa-pencil"></i> &nbsp;Post</button>
                                 <input multiple type='file' style="display:none" id="addedPic" style="" onchange="readURL(this);" />
@@ -101,7 +102,8 @@
                         <i class="fa fa-thumbs-up"></i>
                         <font id="like0">0</font>
                         <div id="comment0" style="display:none">
-                            <p contenteditable="true" id="commentBox0" class=" w3-border w3-padding">Leave your comment here.</p>
+                            <!-- <p contenteditable="true" id="commentBox0" class=" w3-border w3-padding">Leave your comment here.</p> -->
+                            <p><input id="commentBox0" class="w3-input w3-border" type="text" placeholder="Leave your comment here."></p>
                             <button type="button" onclick="submit(0)" class="w3-button w3-black">OK</button>
                         </div>
                         <p class="w3-margin-bottom" id="commentArea0"> </p>
@@ -127,7 +129,8 @@
                     <i class="fa fa-thumbs-up"></i>
                     <font id="like1">30</font>
                     <div style="display:none" id="comment1">
-                        <p contenteditable="true" id="commentBox1" class=" w3-border w3-padding">Leave your comment here.</p>
+                        <!-- <p contenteditable="true" id="commentBox1" class=" w3-border w3-padding">Leave your comment here.</p> -->
+                        <p><input id="commentBox1" class="w3-input w3-border" type="text" placeholder="Leave your comment here."></p>
                         <button type="button" onclick="submit(1)" class="w3-button w3-black w3-margin-bottom">OK</button>
                     </div>
                     <p class="w3-margin-bottom" id="commentArea1"> </p>
@@ -147,7 +150,8 @@
                     <i class="fa fa-thumbs-up"></i>
                     <font id="like2">129</font>
                     <div id="comment2" style="display:none">
-                        <p contenteditable="true" id="commentBox2" class=" w3-border w3-padding">Leave your comment here.</p>
+                        <!-- <p contenteditable="true" id="commentBox2" class=" w3-border w3-padding">Leave your comment here.</p> -->
+                        <p><input id="commentBox2" class="w3-input w3-border" type="text" placeholder="Leave your comment here."></p>
                         <button type="button" onclick="submit(2)" class="w3-button w3-black">OK</button>
                     </div>
                     <p class="w3-margin-bottom" id="commentArea2"> </p>
@@ -172,7 +176,8 @@
                     <i class="fa fa-thumbs-up"></i>
                     <font id="like3">115</font>
                     <div id="comment3" style="display:none">
-                        <p contenteditable="true" id="commentBox3" class=" w3-border w3-padding">Leave your comment here.</p>
+                        <!-- <p contenteditable="true" id="commentBox3" class=" w3-border w3-padding">Leave your comment here.</p> -->
+                        <p><input id="commentBox3" class="w3-input w3-border" type="text" placeholder="Leave your comment here."></p>
                         <button type="button" onclick="submit(3)" class="w3-button w3-black">OK</button>
                     </div>
                     <p class="w3-margin-bottom" id="commentArea3"> </p>
