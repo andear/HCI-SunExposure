@@ -4,6 +4,7 @@ function onPost() {
 
     document.getElementById("postedContent").innerHTML = commentInput;
     document.getElementById("addedMoments").style.display = "inline-block";
+    document.getElementById("addedPrePic1").style.display = "none";
 }
 
 function readURL(input) {
@@ -13,6 +14,8 @@ function readURL(input) {
         reader.onload = function(e) {
             console.log("add pic1");
             document.getElementById("addedPic1").src = e.target.result;
+            document.getElementById("addedPrePic1").src = e.target.result;
+            document.getElementById("addedPrePic1").style.display = "inline-block";
         };
         reader.readAsDataURL(input.files[0]);
     }
